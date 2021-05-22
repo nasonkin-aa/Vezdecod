@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - Floar
   - Spike
+  - Key
   layers:
   - Default
   - TransparentFX

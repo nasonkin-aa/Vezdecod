@@ -10,6 +10,10 @@ public class CharacterController : MonoBehaviour
     private bool IsFloar;
     private float JumpForce = 5;
     private Rigidbody2D CharRb;
+    [SerializeField]
+    SceneManager sceneManager;
+
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Floar" || collision.gameObject.tag == "Wall")
@@ -25,7 +29,13 @@ public class CharacterController : MonoBehaviour
             Destroy(Character);
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex)
         }
+        if (collision.gameObject.tag == "Key")
+        {
+            Destroy(collision.gameObject);
+            sceneManager.AddKey();
+        }
     }
+ 
     void Start()
     {
         CharRb = GetComponent<Rigidbody2D>();
