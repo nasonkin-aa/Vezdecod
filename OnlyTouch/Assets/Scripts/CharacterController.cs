@@ -11,7 +11,7 @@ public class CharacterController : MonoBehaviour
     private float JumpForce = 5;
     private Rigidbody2D CharRb;
     [SerializeField]
-    SceneManager sceneManager;
+    SceneManagerKey sceneManager;
 
     
     private void OnCollisionEnter2D(Collision2D collision)

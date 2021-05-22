@@ -6,13 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    public int LevelUnLock;
+    public int LevelUnLock = 1;
     [SerializeField]
     public Button[] LevelButtons;
     void Start()
     {
-        
-        LevelUnLock = PlayerPrefs.GetInt("Levels", 1);
+        LevelUnLock = PlayerPrefs.GetInt("levels", 1);
 
         for (int i = 0; i < LevelButtons.Length; i++)
             LevelButtons[i].interactable = false;
@@ -25,6 +24,7 @@ public class LevelManager : MonoBehaviour
     {
        SceneManager.LoadScene(levelIndex);
     }
- 
+    
+
 
 }
