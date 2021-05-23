@@ -6,10 +6,11 @@ public class CharacterController : MonoBehaviour
 {
     [SerializeField]
     private GameObject Character;
-    private float Speed = 0.01f;
+    private float Speed = 0.012f;
     private bool IsFloar;
-    private float JumpForce = 5;
+    private float JumpForce = 6.5f;
     private Rigidbody2D CharRb;
+    private float Rota = 1f;
     [SerializeField]
     SceneManagerKey sceneManager;
 
@@ -22,7 +23,8 @@ public class CharacterController : MonoBehaviour
         }
         if (collision.gameObject.tag == "Wall")
         {
-            Speed *= -1;
+            Character.transform.Rotate(0.0f, 180f, 0.0f);
+
         }
         if (collision.gameObject.tag == "Spike")
         {
