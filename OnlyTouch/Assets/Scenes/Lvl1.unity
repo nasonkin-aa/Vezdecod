@@ -3185,6 +3185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39816df449bfd514ba39c1761e3ee270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Lev: 1
 --- !u!1001 &28653611601036630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3299,6 +3300,10 @@ PrefabInstance:
     - target: {fileID: 28653610357523836, guid: 2ace41fbc01847a42a57b2006057b8f0, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 28653610357523838, guid: 2ace41fbc01847a42a57b2006057b8f0, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ace41fbc01847a42a57b2006057b8f0, type: 3}
